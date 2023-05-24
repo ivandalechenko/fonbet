@@ -34,7 +34,6 @@ body
     background-color: black
     line-height: 1
     background-color: #FFFFFF
-    padding-bottom: 20px
 .dnone
     display: none
 a
@@ -43,6 +42,9 @@ a
 .container
     width: 950px
     margin: 0 auto
+    @media (max-width: 1000px)
+        width: 100%
+        padding: 0px 15px
 
 .header
     position: relative
@@ -51,6 +53,8 @@ a
     .container
         height: 100px
         display: flex
+        @media (max-width: 1000px)
+            justify-content: center
         .logo
             margin: auto 0
 
@@ -58,11 +62,21 @@ a
     width: 100%
     overflow: hidden
     padding-bottom: 200px
+    @media (max-width: 780px)
+        padding-bottom: 0px
     .container
         display: flex
         justify-content: space-between
+        flex-wrap: wrap
         .images
             width: 410px
+            @media (max-width: 1000px)
+                width: 100%
+            @media (max-width: 780px)
+                order: 2
+                height: 370px
+                display: flex
+                justify-content: center
             .img
                 height: 0px
                 width: 0px
@@ -70,37 +84,133 @@ a
             .circle
                 left: -401px
                 top: -150px
+                @media (max-width: 1000px)
+                    display: none
+                @media (max-width: 780px)
+                    display: block
+                    position: relative
+                    z-index: -3
+                    left: -200px
+                    top: 80px
+                    img
+                        width: 405px
+
             .phone
                 top: 0px
                 left: -139px
+                @media (max-width: 1000px)
+                    left: -93px
+                    transform: rotate(10deg)
+                @media (max-width: 950px)
+                    left: -200px
+                @media (max-width: 850px)
+                    left: -250px
+                @media (max-width: 780px)
+                    left: -227px
+                    top: -16px
+                    transform: rotate(0deg)
+                    img
+                        width: 435px
             .baseball
                 top: 63px
                 left: 280px
+                @media (max-width: 1000px)
+                    top: 7px
+                    left: 170px
+                @media (max-width: 950px)
+                    left: 120px
+                @media (max-width: 850px)
+                    left: 70px
+                @media (max-width: 780px)
+                    top: 299px
+                    left: -170px
+                    position: relative
+                    z-index: -1
+                    img
+                        width: 55px
+
             .basketball
                 top: 331px
                 left: -251px
+                @media (max-width: 780px)
+                    position: relative
+                    z-index: -1
+                    top: -68px
+                    left: -229px
+                    img
+                        width: 132px
             .hockey
                 top: 534px
                 left: 276px
+                @media (max-width: 1000px)
+                    top: 563px
+                    left: 225px
+                @media (max-width: 950px)
+                    left: 120px
+                @media (max-width: 850px)
+                    left: 70px
+                @media (max-width: 780px)
+                    top: -137px
+                    left: 132px
+                    position: relative
+                    z-index: -1
+                    img
+                        width: 67px
             .football
                 top: 576px
                 left: 801px
+                @media (max-width: 1000px)
+                    top: 610px
+                    left: 712px
+                @media (max-width: 850px)
+                    left: 600px
+                @media (max-width: 780px)
+                    top: -21px
+                    left: 27px
+                    position: relative
+                    z-index: -1
+                    img
+                        width: 185px
 
         .text
             width: 540px
+            @media (max-width: 1000px)
+                width: 600px
+                position: relative
+                z-index: 2
+                margin-left: auto
+
+            @media (max-width: 780px)
+                order: 1
+                width: 100%
+                margin: 0
+
             .bonussum_and_bonustext
                 padding-top: 30px
                 display: flex
                 width: 100%
+                flex-wrap: wrap
                 justify-content: space-between
+                @media (max-width: 1000px)
+                    justify-content: center
+                    column-gap: 30px
+                @media (max-width: 600px)
+                    padding-top: 0px
                 .bonussum
                     font-weight: 900
                     font-size: 84.1025px
                     line-height: 102px
                     letter-spacing: -0.04em
                     color: #E80024
+                    @media (max-width: 600px)
+                        width: 100%
+                        text-align: center
+                        font-size: 75.6922px
+                        line-height: 92px
                 .bonustext
                     margin: auto
+                    @media (max-width: 1000px)
+                        margin: auto 0
                     .freebet
                         width: 210.29px
                         height: 39.86px
@@ -113,25 +223,41 @@ a
                             line-height: 35px
                             color: #FFFFFF
                             margin: auto
+                            @media (max-width: 600px)
+                                font-size: 26.2491px
+                                line-height: 32px
                     .zareg
                         font-weight: 700
                         font-size: 21.8742px
                         line-height: 26px
                         color: #000000
+                        @media (max-width: 600px)
+                            font-size: 19.6868px
+                            line-height: 24px
+                            text-align: center
             .app
                 padding-left: 25px
+                @media (max-width: 1000px)
+                    padding-left: 0px
+
                 .app_header
                     margin-top: 20px
                     font-weight: 700
                     font-size: 29.0536px
                     line-height: 35px
                     color: #000000
+                    @media (max-width: 600px)
+                        font-size: 23.4745px
+                        line-height: 28px
                 .app_desc
                     font-weight: 500
                     font-size: 18.3496px
                     line-height: 20px
                     color: #000000
                     margin-top: 25px
+                    @media (max-width: 600px)
+                        font-size: 12.83px
+                        line-height: 16px
                 .app_howto_install
                     margin-top: 25px
                     display: flex
@@ -144,6 +270,9 @@ a
                         font-size: 48.9323px
                         line-height: 20px
                         color: #D42A28
+                        @media (max-width: 600px)
+                            font-size: 39.5361px
+                            line-height: 16px
                     .text
                         widows: 85%
                         margin: auto
@@ -151,12 +280,18 @@ a
                         font-size: 18.3496px
                         line-height: 20px
                         color: #000000
+                        @media (max-width: 600px)
+                            font-size: 11px
+                            line-height: 16px
                 .app_req
                     margin-top: 25px
                     font-weight: 400
                     font-size: 14.12px
                     line-height: 17px
                     color: #000000
+                    @media (max-width: 600px)
+                        font-size: 9.41px
+                        line-height: 11px
                 .app_install
                     width: 100%
                     display: flex
@@ -171,3 +306,6 @@ a
                         font-size: 34.1238px
                         line-height: 41px
                         color: #FFFFFF
+                        @media (max-width: 600px)
+                            font-size: 30.7114px
+                            line-height: 37px

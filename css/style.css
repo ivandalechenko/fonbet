@@ -42,7 +42,6 @@ body {
   background-color: black;
   line-height: 1;
   background-color: #FFFFFF;
-  padding-bottom: 20px;
 }
 
 .dnone {
@@ -57,6 +56,12 @@ a {
   width: 950px;
   margin: 0 auto;
 }
+@media (max-width: 1000px) {
+  .container {
+    width: 100%;
+    padding: 0px 15px;
+  }
+}
 
 .header {
   position: relative;
@@ -67,6 +72,11 @@ a {
   height: 100px;
   display: flex;
 }
+@media (max-width: 1000px) {
+  .header .container {
+    justify-content: center;
+  }
+}
 .header .container .logo {
   margin: auto 0;
 }
@@ -76,12 +86,31 @@ a {
   overflow: hidden;
   padding-bottom: 200px;
 }
+@media (max-width: 780px) {
+  .content {
+    padding-bottom: 0px;
+  }
+}
 .content .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .content .container .images {
   width: 410px;
+}
+@media (max-width: 1000px) {
+  .content .container .images {
+    width: 100%;
+  }
+}
+@media (max-width: 780px) {
+  .content .container .images {
+    order: 2;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+  }
 }
 .content .container .images .img {
   height: 0px;
@@ -92,34 +121,192 @@ a {
   left: -401px;
   top: -150px;
 }
+@media (max-width: 1000px) {
+  .content .container .images .circle {
+    display: none;
+  }
+}
+@media (max-width: 780px) {
+  .content .container .images .circle {
+    display: block;
+    position: relative;
+    z-index: -3;
+    left: -200px;
+    top: 80px;
+  }
+  .content .container .images .circle img {
+    width: 405px;
+  }
+}
 .content .container .images .phone {
   top: 0px;
   left: -139px;
+}
+@media (max-width: 1000px) {
+  .content .container .images .phone {
+    left: -93px;
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 950px) {
+  .content .container .images .phone {
+    left: -200px;
+  }
+}
+@media (max-width: 850px) {
+  .content .container .images .phone {
+    left: -250px;
+  }
+}
+@media (max-width: 780px) {
+  .content .container .images .phone {
+    left: -227px;
+    top: -16px;
+    transform: rotate(0deg);
+  }
+  .content .container .images .phone img {
+    width: 435px;
+  }
 }
 .content .container .images .baseball {
   top: 63px;
   left: 280px;
 }
+@media (max-width: 1000px) {
+  .content .container .images .baseball {
+    top: 7px;
+    left: 170px;
+  }
+}
+@media (max-width: 950px) {
+  .content .container .images .baseball {
+    left: 120px;
+  }
+}
+@media (max-width: 850px) {
+  .content .container .images .baseball {
+    left: 70px;
+  }
+}
+@media (max-width: 780px) {
+  .content .container .images .baseball {
+    top: 299px;
+    left: -170px;
+    position: relative;
+    z-index: -1;
+  }
+  .content .container .images .baseball img {
+    width: 55px;
+  }
+}
 .content .container .images .basketball {
   top: 331px;
   left: -251px;
+}
+@media (max-width: 780px) {
+  .content .container .images .basketball {
+    position: relative;
+    z-index: -1;
+    top: -68px;
+    left: -229px;
+  }
+  .content .container .images .basketball img {
+    width: 132px;
+  }
 }
 .content .container .images .hockey {
   top: 534px;
   left: 276px;
 }
+@media (max-width: 1000px) {
+  .content .container .images .hockey {
+    top: 563px;
+    left: 225px;
+  }
+}
+@media (max-width: 950px) {
+  .content .container .images .hockey {
+    left: 120px;
+  }
+}
+@media (max-width: 850px) {
+  .content .container .images .hockey {
+    left: 70px;
+  }
+}
+@media (max-width: 780px) {
+  .content .container .images .hockey {
+    top: -137px;
+    left: 132px;
+    position: relative;
+    z-index: -1;
+  }
+  .content .container .images .hockey img {
+    width: 67px;
+  }
+}
 .content .container .images .football {
   top: 576px;
   left: 801px;
 }
+@media (max-width: 1000px) {
+  .content .container .images .football {
+    top: 610px;
+    left: 712px;
+  }
+}
+@media (max-width: 850px) {
+  .content .container .images .football {
+    left: 600px;
+  }
+}
+@media (max-width: 780px) {
+  .content .container .images .football {
+    top: -21px;
+    left: 27px;
+    position: relative;
+    z-index: -1;
+  }
+  .content .container .images .football img {
+    width: 185px;
+  }
+}
 .content .container .text {
   width: 540px;
+}
+@media (max-width: 1000px) {
+  .content .container .text {
+    width: 600px;
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+  }
+}
+@media (max-width: 780px) {
+  .content .container .text {
+    order: 1;
+    width: 100%;
+    margin: 0;
+  }
 }
 .content .container .text .bonussum_and_bonustext {
   padding-top: 30px;
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  .content .container .text .bonussum_and_bonustext {
+    justify-content: center;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .content .container .text .bonussum_and_bonustext {
+    padding-top: 0px;
+  }
 }
 .content .container .text .bonussum_and_bonustext .bonussum {
   font-weight: 900;
@@ -128,8 +315,21 @@ a {
   letter-spacing: -0.04em;
   color: #E80024;
 }
+@media (max-width: 600px) {
+  .content .container .text .bonussum_and_bonustext .bonussum {
+    width: 100%;
+    text-align: center;
+    font-size: 75.6922px;
+    line-height: 92px;
+  }
+}
 .content .container .text .bonussum_and_bonustext .bonustext {
   margin: auto;
+}
+@media (max-width: 1000px) {
+  .content .container .text .bonussum_and_bonustext .bonustext {
+    margin: auto 0;
+  }
 }
 .content .container .text .bonussum_and_bonustext .bonustext .freebet {
   width: 210.29px;
@@ -145,14 +345,32 @@ a {
   color: #FFFFFF;
   margin: auto;
 }
+@media (max-width: 600px) {
+  .content .container .text .bonussum_and_bonustext .bonustext .freebet p {
+    font-size: 26.2491px;
+    line-height: 32px;
+  }
+}
 .content .container .text .bonussum_and_bonustext .bonustext .zareg {
   font-weight: 700;
   font-size: 21.8742px;
   line-height: 26px;
   color: #000000;
 }
+@media (max-width: 600px) {
+  .content .container .text .bonussum_and_bonustext .bonustext .zareg {
+    font-size: 19.6868px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
 .content .container .text .app {
   padding-left: 25px;
+}
+@media (max-width: 1000px) {
+  .content .container .text .app {
+    padding-left: 0px;
+  }
 }
 .content .container .text .app .app_header {
   margin-top: 20px;
@@ -161,12 +379,24 @@ a {
   line-height: 35px;
   color: #000000;
 }
+@media (max-width: 600px) {
+  .content .container .text .app .app_header {
+    font-size: 23.4745px;
+    line-height: 28px;
+  }
+}
 .content .container .text .app .app_desc {
   font-weight: 500;
   font-size: 18.3496px;
   line-height: 20px;
   color: #000000;
   margin-top: 25px;
+}
+@media (max-width: 600px) {
+  .content .container .text .app .app_desc {
+    font-size: 12.83px;
+    line-height: 16px;
+  }
 }
 .content .container .text .app .app_howto_install {
   margin-top: 25px;
@@ -182,6 +412,12 @@ a {
   line-height: 20px;
   color: #D42A28;
 }
+@media (max-width: 600px) {
+  .content .container .text .app .app_howto_install .num {
+    font-size: 39.5361px;
+    line-height: 16px;
+  }
+}
 .content .container .text .app .app_howto_install .text {
   widows: 85%;
   margin: auto;
@@ -190,12 +426,24 @@ a {
   line-height: 20px;
   color: #000000;
 }
+@media (max-width: 600px) {
+  .content .container .text .app .app_howto_install .text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
 .content .container .text .app .app_req {
   margin-top: 25px;
   font-weight: 400;
   font-size: 14.12px;
   line-height: 17px;
   color: #000000;
+}
+@media (max-width: 600px) {
+  .content .container .text .app .app_req {
+    font-size: 9.41px;
+    line-height: 11px;
+  }
 }
 .content .container .text .app .app_install {
   width: 100%;
@@ -212,4 +460,10 @@ a {
   font-size: 34.1238px;
   line-height: 41px;
   color: #FFFFFF;
+}
+@media (max-width: 600px) {
+  .content .container .text .app .app_install button {
+    font-size: 30.7114px;
+    line-height: 37px;
+  }
 }
