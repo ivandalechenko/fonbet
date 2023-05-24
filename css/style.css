@@ -71,6 +71,11 @@ a {
   margin: auto 0;
 }
 
+.content {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 200px;
+}
 .content .container {
   display: flex;
   justify-content: space-between;
@@ -102,6 +107,10 @@ a {
 .content .container .images .hockey {
   top: 534px;
   left: 276px;
+}
+.content .container .images .football {
+  top: 576px;
+  left: 801px;
 }
 .content .container .text {
   width: 540px;
@@ -187,4 +196,20 @@ a {
   font-size: 14.12px;
   line-height: 17px;
   color: #000000;
+}
+.content .container .text .app .app_install {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.content .container .text .app .app_install button {
+  width: 246.75px;
+  height: 60.86px;
+  background: #E80024;
+  border-radius: 117.883px;
+  font-weight: 800;
+  font-size: 34.1238px;
+  line-height: 41px;
+  color: #FFFFFF;
 }
